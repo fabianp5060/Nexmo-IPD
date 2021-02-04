@@ -296,7 +296,8 @@ const handleSpeech = async (request) => {
     logger.info(`NexmoController:: handleSpeech:: IPD ftp-Filename: ${ipdFileName}`)
     logger.info(`NexmoController:: handleSpeech:: IPD ftp-ipdMethod: ${ipdMethod}`)
 
-    if (questionData.isValidPin) IPDHelper.sendfTP(request, questionData.pinCode, ipdFileName, ipdMethod)
+    // if (questionData.isValidPin) IPDHelper.sendfTP(request, questionData.pinCode, ipdFileName, ipdMethod)
+    if (questionData.isValidPin) NexmoHelper.moveRecording(request, questionData.pinCode, ipdFileName, ipdMethod)
     return ncco;
 
 }
