@@ -1,2 +1,4 @@
 .env
 config
+private.key
+node_modules
